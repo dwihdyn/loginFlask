@@ -1,0 +1,25 @@
+{% block body %}
+
+<form action = "/login" method = "POST"> 
+    <input type = "text" name = "uSerName" placeholder="enter UserName">
+    <input type = "password" name = "pAssWord" placeholder = "enter PassWord">
+    <input type = "submit" value = "Login">
+</form>
+
+
+<!-- <a href="registeration.html">Register here</a>                                     Method 1
+<button onclick="redirecttoregistration()">register here</button>                       Method 2        
+
+
+<script>
+    function redirecttoregistration() {
+        window.location.href = "registeration.html"
+    }
+</script>           -->
+
+<form action="/registration">                                                      <!-- Method 3-->
+    <input type="submit" value="register here">
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% block body %}
+
+
+<table>
+
+{% for userData in listUsers %}    <!-- modern looping across list of users from UserABC database, which we define as listUsers -->
+<tr>
+   <td>{{ userData.usernameABC }}</td>
+   <td>{{ userData.passwordABC }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+
+{% endblock %}

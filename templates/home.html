@@ -1,0 +1,22 @@
+{% block body %}
+
+{% if session['logged_in'] %}                                   <!-- if session['logged_in'] = True-->
+
+    <div> Welcome back mate </div>                              <!-- messages dont need to be inside <form>. just <div> -->
+    <form action="/logout" method="POST">                       <!-- give an option to logout. <form> is used to create button-->
+        <input type="submit" value="LogOut">                    <!-- type = "submit" to have logout as button-->
+    </form>
+
+    <form action = "/seeAllUsers">          <!--dont need method = POST bc we are not submitting any data-->  
+        <input type="submit" value="Show me all users">    
+    </form>             
+
+{% else %}
+
+    <div> wrong password. ask your admin for permission </div>
+    <form action="/">                                             <!-- no 'method' means you can go by '/' route any kind of method-->
+        <input type="submit" value="Back to login page">
+    </form>
+
+{% endif %}
+{% endblock %}
